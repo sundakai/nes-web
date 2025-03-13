@@ -1,0 +1,13 @@
+# 前后端集成为一个项目
+
+version: '3'
+services:
+  aio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8848:8848"
+      - "8799:8799"
+    environment:
+      BACKEND_URL: "/backend"

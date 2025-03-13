@@ -135,3 +135,17 @@ yarn install
 ```shell
 yarn dev
 ```
+
+Docker 部署
+
+项目根目录运行
+
+前后端分为两个容器
+```shell
+docker compose up -d
+```
+
+前后端合并为一个容器
+```shell
+docker compose -f docker-compose-aio.yml up -d
+```

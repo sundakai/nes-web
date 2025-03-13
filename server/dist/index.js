@@ -175,10 +175,13 @@ var hostIp = getIpAddress();
 var getDataBasePath = () => (0, import_path.join)(__dirname, dbPath);
 var getRomPath = () => (0, import_path.join)(__dirname, romPath);
 var port = 8848;
-var baseURL = `http://localhost:${port}`;
-if (process.env.NODE_ENV === "development") {
-  baseURL = `http://${hostIp}:${port}`;
-}
+
+var baseURL = process.env.BACKEND_URL;
+// var baseURL = `/backend`;
+// var baseURL = `http://localhost:${port}`;
+// if (process.env.NODE_ENV === "development") {
+//   baseURL = `http://${hostIp}:${port}`;
+// }
 
 // src/utils/query.ts
 function checkQuery(query) {
